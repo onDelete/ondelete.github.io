@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="southwe,java,github_pages,hexo,linux" />
+  <meta name="keywords" content="maven,tomcat," />
 
 
 
@@ -85,15 +85,16 @@
 
 
 
-<meta name="description" content="如果痴痴地等，某日终于可以等到一生中最爱。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SW">
-<meta property="og:url" content="http://yoursite.com/tags/java环境变量/index.html">
+<meta name="description" content="在使用ubuntu的时候会遇到各种开发环境的配置，由于ubuntu本身自带的源往往版本要比较陈旧，所以有些环境需要手动配置最新包。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu下maven常用java开发环境的配置">
+<meta property="og:url" content="http://yoursite.com/2016/10/23/ubuntuEnv/index.html">
 <meta property="og:site_name" content="SW">
-<meta property="og:description" content="如果痴痴地等，某日终于可以等到一生中最爱。">
+<meta property="og:description" content="在使用ubuntu的时候会遇到各种开发环境的配置，由于ubuntu本身自带的源往往版本要比较陈旧，所以有些环境需要手动配置最新包。">
+<meta property="og:updated_time" content="2016-10-23T05:27:54.724Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SW">
-<meta name="twitter:description" content="如果痴痴地等，某日终于可以等到一生中最爱。">
+<meta name="twitter:title" content="ubuntu下maven常用java开发环境的配置">
+<meta name="twitter:description" content="在使用ubuntu的时候会遇到各种开发环境的配置，由于ubuntu本身自带的源往往版本要比较陈旧，所以有些环境需要手动配置最新包。">
 
 
 
@@ -114,9 +115,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/java环境变量/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/23/ubuntuEnv/"/>
 
-  <title> 标签: java环境变量 | SW </title>
+  <title> ubuntu下maven常用java开发环境的配置 | SW </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,46 +236,178 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        java环境变量
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ubuntu下maven常用java开发环境的配置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-23T12:14:18+08:00" content="2016-10-23">
+              2016-10-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/23/ubuntuEnv/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/23/ubuntuEnv/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/23/ubuntuEnv/" class="leancloud_visitors" data-flag-title="ubuntu下maven常用java开发环境的配置">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>在使用ubuntu的时候会遇到各种开发环境的配置，由于ubuntu本身自带的源往往版本要比较陈旧，所以有些环境需要手动配置最新包。<br><a id="more"></a><br>下面是关于java常用的开发环境的配置，在配置下面的这些环境时，请先安装<a href="https://ondelete.github.io/2016/10/06/configJavaEnvVar/" target="_blank" rel="external">java</a>：<br><strong>MAVEN</strong><br>maven是常用项目构建的工具，下面是ubuntu下安装maven开发环境的命令：<br>1.去官网下载最新的tar包，然后解压缩到到本地目录<br>2.配置maven的环境变量：<br><code>vim ~/.bashrc</code><br><code>export M2_HOME=mave主目录</code><br><code>export PATH=$PATH:${M2_HOME}/bin</code><br><code>source /etc/profile</code><br>3.测试：<br><code>mvn -v</code><br><strong>tomcat</strong><br>tomcat是javaweb开发最常用的容器，下面是ubuntu下安装tomcat容器的命令：<br>1.去官网下载最新的tar包，然后解压缩到到本地目录<br>2.配置tomcat，进入tomcat目录下的bin目录，修改其startup.sh，在其中添加<br><code>JAVA_HOME=yourjdkdir</code><br><code>JRE_HOME=${JAVA_HOME}/jre</code><br><code>CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib</code><br><code>PATH=${JAVA_HOME}/bin:$PATH</code><br><code>TOMCAT_HOME=yourtomcatdir</code><br>注意要添加在<code>exec &quot;$PRGDIR&quot;/&quot;$EXECUTABLE&quot; start &quot;$@&quot;</code>之前。相应的网shutdownup.sh中也做相同的添加。<br>3.修改manager，打开其conf目录下的tomcat-users.xml，在其中添加：<br><code>&lt;role rolename=&quot;manager-gui&quot;/&gt;</code><br><code>&lt;user username=&quot;yourusername&quot; password=&quot;yourpassword&quot; roles=&quot;manager-gui&quot;/&gt;</code><br>保存相关的修改即可。<br>4.启动tomcat<br><code>./startup.sh</code><br>当看到设立了shell中出现<code>tomcat started.</code>说明配置完成。可以打开浏览器，访问<strong>localhost:8080</strong>，当出现一个猫脸，你的tomcat就配置好了。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/10/06/configJavaEnvVar/" itemprop="url">
-              
-                <span itemprop="name">配置java环境变量</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-06T12:51:22+08:00"
-              content="2016-10-06" >
-          10-06
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/maven/" rel="tag">#maven</a>
+          
+            <a href="/tags/tomcat/" rel="tag">#tomcat</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/15/sha1/" rel="next" title="如何得到一个字符串SHA1值">
+                <i class="fa fa-chevron-left"></i> 如何得到一个字符串SHA1值
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/23/ubuntuEnv/"
+     data-title="ubuntu下maven常用java开发环境的配置"
+     data-content=""
+     data-url="http://yoursite.com/2016/10/23/ubuntuEnv/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -282,6 +415,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/23/ubuntuEnv/"
+           data-title="ubuntu下maven常用java开发环境的配置" data-url="http://yoursite.com/2016/10/23/ubuntuEnv/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -301,8 +442,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -372,6 +522,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -474,6 +635,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
