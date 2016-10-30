@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="southwe,java,github_pages,hexo,linux" />
+  <meta name="keywords" content="IO,File," />
 
 
 
@@ -85,16 +85,16 @@
 
 
 
-<meta name="description" content="如果痴痴地等，某日终于可以等到一生中最爱。">
+<meta name="description" content="利用File类和IO相关的api实现了一些基本的系统功能 show my codes ：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="File类的常用api">
+<meta property="og:title" content="File类和IO流相关常用api的练习">
 <meta property="og:url" content="http://yoursite.com/2016/10/27/file/index.html">
 <meta property="og:site_name" content="SW">
-<meta property="og:description" content="如果痴痴地等，某日终于可以等到一生中最爱。">
-<meta property="og:updated_time" content="2016-10-27T12:00:20.203Z">
+<meta property="og:description" content="利用File类和IO相关的api实现了一些基本的系统功能 show my codes ：">
+<meta property="og:updated_time" content="2016-10-28T13:10:30.191Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="File类的常用api">
-<meta name="twitter:description" content="如果痴痴地等，某日终于可以等到一生中最爱。">
+<meta name="twitter:title" content="File类和IO流相关常用api的练习">
+<meta name="twitter:description" content="利用File类和IO相关的api实现了一些基本的系统功能 show my codes ：">
 
 
 
@@ -117,7 +117,7 @@
 
   <link rel="canonical" href="http://yoursite.com/2016/10/27/file/"/>
 
-  <title> File类的常用api | SW </title>
+  <title> File类和IO流相关常用api的练习 | SW </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,7 +257,7 @@
             
             
               
-                File类的常用api
+                File类和IO流相关常用api的练习
               
             
           </h1>
@@ -310,7 +310,7 @@
 
           
           
-             <span id="/2016/10/27/file/" class="leancloud_visitors" data-flag-title="File类的常用api">
+             <span id="/2016/10/27/file/" class="leancloud_visitors" data-flag-title="File类和IO流相关常用api的练习">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -332,7 +332,8 @@
       
 
       
-        
+        <h2 id="利用File类和IO相关的api实现了一些基本的系统功能"><a href="#利用File类和IO相关的api实现了一些基本的系统功能" class="headerlink" title="利用File类和IO相关的api实现了一些基本的系统功能"></a>利用File类和IO相关的api实现了一些基本的系统功能</h2><p><strong> show my codes </strong>：<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> io.ondelete.file;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.*;</div><div class="line"><span class="keyword">import</span> java.text.DateFormat;</div><div class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</div><div class="line"><span class="keyword">import</span> java.util.Date;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by southwe</div><div class="line"> * 以下是对File类和IO流的基本api的一些小练习</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUtils</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">newFile</span><span class="params">(String path)</span> </span>&#123;</div><div class="line">        File file = <span class="keyword">new</span> File(path);</div><div class="line">        <span class="keyword">if</span> (!file.exists()) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                System.out.println(<span class="string">"file created! "</span> + file.createNewFile());</div><div class="line">                System.out.println(<span class="string">"file can read. "</span> + file.canRead());</div><div class="line">                System.out.println(<span class="string">"file can write. "</span> + file.canWrite());</div><div class="line">                System.out.println(<span class="string">"file can excute. "</span> + file.canExecute());</div><div class="line">                System.out.println(<span class="string">"file length:"</span> + file.length());</div><div class="line">                System.out.println(file);</div><div class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            System.out.println(<span class="string">"file deleted! "</span> + file.delete());</div><div class="line">            file.deleteOnExit();</div><div class="line">        &#125;</div><div class="line">        System.out.println(<span class="string">"separator--&gt;"</span> + File.separator);<span class="comment">//文件分割符：windows下是"\",unix下是"/"</span></div><div class="line">        System.out.println(<span class="string">"separatorChar--&gt;"</span> + File.separatorChar);</div><div class="line">        System.out.println(<span class="string">"pathSeparator--&gt;"</span> + File.pathSeparator);<span class="comment">//路径分割符：windows下是";",unix下是":"(在环境变量PTAH配置时可见)</span></div><div class="line">        System.out.println(<span class="string">"pathSeparatorChar--&gt;"</span> + File.pathSeparatorChar);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 列出指定的文件或文件夹路径 unix风格</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> path 指定要列出的文件或文件夹路径</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ls</span><span class="params">(String path)</span> </span>&#123;</div><div class="line">        File file = <span class="keyword">new</span> File(path);</div><div class="line">        <span class="keyword">if</span> (!file.exists()) &#123;</div><div class="line">            System.out.println(<span class="string">"dir make! "</span> + file.mkdirs());</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            File[] files = file.listFiles();</div><div class="line">            <span class="keyword">for</span> (File f : files</div><div class="line">                    ) &#123;</div><div class="line">                String isdir = f.isDirectory() ? <span class="string">"d"</span> : <span class="string">"-"</span>;</div><div class="line">                String canread = f.canRead() ? <span class="string">"r"</span> : <span class="string">"-"</span>;</div><div class="line">                String canwrite = f.canWrite() ? <span class="string">"w"</span> : <span class="string">"-"</span>;</div><div class="line">                String canexcute = f.canExecute() ? <span class="string">"x"</span> : <span class="string">"-"</span>;</div><div class="line">                <span class="keyword">long</span> time = f.lastModified();</div><div class="line">                Date date = <span class="keyword">new</span> Date(time);</div><div class="line">                DateFormat format = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"MM月 dd HH:mm"</span>);</div><div class="line">                String formattime = format.format(date);</div><div class="line">                System.out.println(isdir + canread + canwrite + canexcute + <span class="string">" "</span></div><div class="line">                        + f.length() + <span class="string">" "</span> + formattime + <span class="string">" "</span> + f.getName());</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 实现文件的拷贝</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> src  原文件路径</div><div class="line">     * <span class="doctag">@param</span> dest 目标文件路径</div><div class="line">     * <span class="doctag">@throws</span> IOException</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">cpFile</span><span class="params">(File src, File dest)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!dest.exists()) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                dest.createNewFile();</div><div class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        InputStream is = <span class="keyword">null</span>;</div><div class="line">        OutputStream os = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            is = <span class="keyword">new</span> FileInputStream(src);</div><div class="line">            os = <span class="keyword">new</span> FileOutputStream(dest, <span class="keyword">true</span>);<span class="comment">//后面的true表示追加操作，默认为false，在写入时覆盖原有的数据。</span></div><div class="line">            <span class="keyword">byte</span>[] flush = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line">            <span class="keyword">int</span> len = <span class="number">0</span>;</div><div class="line">            <span class="keyword">while</span> (-<span class="number">1</span> != (len = is.read(flush))) &#123;</div><div class="line">                <span class="comment">//</span></div><div class="line">                <span class="comment">//is.read(flush,0,len)</span></div><div class="line">                os.write(flush, <span class="number">0</span>, len);</div><div class="line">            &#125;</div><div class="line">            os.flush();</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            <span class="keyword">throw</span> e;</div><div class="line">        &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</div><div class="line">            <span class="keyword">throw</span> e;</div><div class="line">        &#125; <span class="keyword">finally</span> &#123;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> != is &amp;&amp; <span class="keyword">null</span> != os) &#123;</div><div class="line">                <span class="keyword">try</span> &#123;</div><div class="line">                    os.close();</div><div class="line">                    is.close();</div><div class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                    <span class="keyword">throw</span> e;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 实现对一个文件夹的拷贝</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> src  原文件或者文件夹对象</div><div class="line">     * <span class="doctag">@param</span> dest 目标文件或者文件夹对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">cpdir</span><span class="params">(File src, File dest)</span> </span>&#123;</div><div class="line">        <span class="comment">//判断src对象是否是一个文件，如果为一个文件，则直接创建</span></div><div class="line">        <span class="keyword">if</span> (src.isFile()) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                cpFile(src, dest);</div><div class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</div><div class="line">            <span class="keyword">throw</span> e;</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (src.isDirectory()) &#123;</div><div class="line">            <span class="comment">//如果为一个目录，首先创建dest文件夹</span></div><div class="line">            <span class="keyword">if</span> (!dest.exists()) &#123;</div><div class="line">                dest.mkdir();</div><div class="line">            &#125;</div><div class="line">            <span class="comment">//然后遍历src文件夹，查看其子内容时文件夹还是文件，递归调用本方法，达到拷贝文件夹的目的</span></div><div class="line">            <span class="keyword">for</span> (File sub :</div><div class="line">                    src.listFiles()) &#123;</div><div class="line">                cpdir(sub, <span class="keyword">new</span> File(dest, sub.getName()));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * <span class="doctag">@param</span> srcpath  原文件或者文件夹路径</div><div class="line">     * <span class="doctag">@param</span> destpath 目标文件或者文件夹路径</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">cpdir</span><span class="params">(String srcpath, String destpath)</span> </span>&#123;</div><div class="line">        cpdir(<span class="keyword">new</span> File(srcpath), <span class="keyword">new</span> File(destpath));</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -352,6 +353,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/IO/" rel="tag">#IO</a>
+          
+            <a href="/tags/File/" rel="tag">#File</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -364,6 +373,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/28/ln/" rel="prev" title="ln命令">
+                ln命令 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -379,7 +392,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/10/27/file/"
-     data-title="File类的常用api"
+     data-title="File类和IO流相关常用api的练习"
      data-content=""
      data-url="http://yoursite.com/2016/10/27/file/">
   <div class="ds-share-inline">
@@ -409,7 +422,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/10/27/file/"
-           data-title="File类的常用api" data-url="http://yoursite.com/2016/10/27/file/">
+           data-title="File类和IO流相关常用api的练习" data-url="http://yoursite.com/2016/10/27/file/">
       </div>
     
   </div>
@@ -454,7 +467,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -462,7 +475,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -471,7 +484,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -520,7 +533,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用File类和IO相关的api实现了一些基本的系统功能"><span class="nav-number">1.</span> <span class="nav-text">利用File类和IO相关的api实现了一些基本的系统功能</span></a></li></ol></div>
             
           </div>
         </section>
