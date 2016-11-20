@@ -259,6 +259,143 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/13/multithread/" itemprop="url">
+                  Java多线程基础
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-13T21:44:21+08:00" content="2016-11-13">
+              2016-11-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaSE/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaSE</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/13/multithread/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/13/multithread/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/13/multithread/" class="leancloud_visitors" data-flag-title="Java多线程基础">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><em>以下时java多线程学习的一些笔记和心得。</em></p>
+<h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><blockquote>
+<p><strong>进程</strong>一般作为资源的组织单位。有自己独立的地址空间，包含程序内容和数据，不同的进程的地址空间时相互隔离的。进程拥有各种资源和状态信息，包括打开的子进程、文件和信号处理器。<strong>线程</strong>表示的是程序的执行流程，是CPU调度的基本单位，有自己的程序计数器、寄存器、堆和栈等。同一个进程中的线程共用进程的地址空间，同时共享进程拥有的内存和其它资源。</p>
+</blockquote>
+<h3 id="引入多线程的目的"><a href="#引入多线程的目的" class="headerlink" title="引入多线程的目的"></a>引入多线程的目的</h3><p>引入线程的目的是为了解决效率问题，避免因为阻塞或者其它而导致的CPU性能无法充分利用的问题。一般影响线程执行效率的是在使用CPU和进行IO操作的时候。</p>
+<h3 id="实现多线程的基本方式"><a href="#实现多线程的基本方式" class="headerlink" title="实现多线程的基本方式"></a>实现多线程的基本方式</h3><p><strong>继承Thread类</strong><br><code>class MyThread extends Thread{public void run(){code}}</code><br>或者<strong>实现Runnable接口</strong>，然后将实现了Runnable接口的对象作为参数传入Thread中构建一个Thread实例<br><code>class MyRunnable implements Runnable{public void run(){code}}</code><br><code>Thread thread = new Thread(new MyRunnable);</code><br>然后我们可以调用Thread实例的<strong>start()</strong>方法，就可以启动一个线程。</p>
+<h3 id="多线程引发的问题"><a href="#多线程引发的问题" class="headerlink" title="多线程引发的问题"></a>多线程引发的问题</h3><h4 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h4><blockquote>
+<p>在多线程程序中，当一个线程对共享变量所做的修改对于其它线程并不可见，导致其它的线程人然使用错误的值，就会造成可见性问题。在代码被运行时，对于一条代码语句，可能对应着虚拟机中多条的指令序列，由于CPU在调用线程时不可预知，那么就可能出现在执行某一条语句时，执行到其所对应的指令的间隙就切换到了其它线程执行，引发错误。<br>还有一种情况是和CPU相关的，现在的CPU一般采用<strong>多级缓存</strong>，多级缓存的引入是为了提高读取效率，增加CPU运算的性能，但是这样也会引发一些问题：由于线程在读取数据的时候是从主存时读取的，当一个线程对一个共享变量进行了修改的时候，这个变量没有及时地写入到主存中，而是暂时保存在了缓存中，那么CPU此时切换另一个线程运行时，读取到的时主存的原来的值。<br>另一个可能的原因是编译器出于对性能的考虑，可能会对生成的字节吗进行<strong>指令重排</strong>，优化指令的执行顺序，这也可能会引发多线程可见性问题。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/01/tips1/" itemprop="url">
                   取模
                 </a>
@@ -763,137 +900,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/27/file/" itemprop="url">
-                  File类和IO流相关常用api的练习
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-27T18:22:07+08:00" content="2016-10-27">
-              2016-10-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaSE/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaSE</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/27/file/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/27/file/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/27/file/" class="leancloud_visitors" data-flag-title="File类和IO流相关常用api的练习">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="利用File类和IO相关的api实现了一些基本的系统功能"><a href="#利用File类和IO相关的api实现了一些基本的系统功能" class="headerlink" title="利用File类和IO相关的api实现了一些基本的系统功能"></a>利用File类和IO相关的api实现了一些基本的系统功能</h2><p><strong> show my codes </strong>：<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/27/file/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -939,7 +945,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -956,7 +962,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
