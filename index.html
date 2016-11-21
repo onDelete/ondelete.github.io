@@ -259,8 +259,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/13/multithread/" itemprop="url">
-                  Java多线程基础
+                <a class="post-title-link" href="/2016/11/21/IOdis/" itemprop="url">
+                  I/O重定向
                 </a>
               
             
@@ -273,8 +273,139 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-13T21:44:21+08:00" content="2016-11-13">
-              2016-11-13
+            <time itemprop="dateCreated" datetime="2016-11-21T23:28:19+08:00" content="2016-11-21">
+              2016-11-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/21/IOdis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/21/IOdis/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/21/IOdis/" class="leancloud_visitors" data-flag-title="I/O重定向">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="I-O重定向"><a href="#I-O重定向" class="headerlink" title="I/O重定向"></a>I/O重定向</h3><p>在UNIX哲学中，任何东西都是一个文件。我们在使用命令的时候，总是会在终端得到一些输出的结果，或者一些状态的信息。这里得到的标准输出和标准错误，默认情况下，标准输出和标准错误都连接到屏幕，而标准输入则与键盘相连。有时候我们需要做持久化处理，就是把一些输出的结果当作一个文件保存在磁盘上。，这时我们就需要，让输出的结果更改输出的方向，让它不再输出到屏幕。而是输出到文件中。</p>
+<h4 id="重定向标准输出"><a href="#重定向标准输出" class="headerlink" title="重定向标准输出"></a>重定向标准输出</h4><p>使用<code>&gt;</code>符可以重定向标准输出：<br><code>cmds &gt; file</code><br>但是有些时候我们使用命令不当，会导致控制台出现错误信息，要是我们不小心使用上面的方式，那么就不会将命令执行的结果输出到文件中，并且更重要的是由于我们在执行重定向操作的时候没有将新的内容写入文件，此时文件的内容会被覆盖，但是由于输出的错误信息输出到了控制台，那么我们此时的文件就没有内容，文件的长度为零。现在我们知道<code>&gt;</code>符有覆盖文件内容的作用，那么使用：<br><code>&gt; file</code><br>可以创建一个新的空文件，因为我们什么都没有输出到新创建的这个文件中。<br>如果我们想要追加一些内容到一个文件中，那么就需要我们使用新命令<code>&gt;&gt;</code>：<br><code>cmds &gt;&gt; file</code></p>
+<h4 id="重定向标准错误"><a href="#重定向标准错误" class="headerlink" title="重定向标准错误"></a>重定向标准错误</h4><p>上面说当我们试图把一个错误的命令输入一个文件的时候，会将错误的信息输出到屏幕上，那么应该如何解决重定向标准错误的问题呢？<br>要想重定向标准错误，需要使用文件描述符。标准输入、输出、错误的描述符分别为0、1、2.使用方式：<br><code>cmds 2&gt; error.txt</code><br>要想同时重定向标准输出和错误，可以：<br><code>cmds &gt; all.txt 2&amp;&gt;1</code>或者更加简单的：<br><code>cmds &amp;&gt; all.txt</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/21/multithread/" itemprop="url">
+                  多线程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-21T23:28:02+08:00" content="2016-11-21">
+              2016-11-21
             </time>
           </span>
 
@@ -303,8 +434,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/13/multithread/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/13/multithread/" itemprop="commentsCount"></span>
+                <a href="/2016/11/21/multithread/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/21/multithread/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -314,7 +445,7 @@
 
           
           
-             <span id="/2016/11/13/multithread/" class="leancloud_visitors" data-flag-title="Java多线程基础">
+             <span id="/2016/11/21/multithread/" class="leancloud_visitors" data-flag-title="多线程">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -477,137 +608,6 @@
           
             <p>最初开始学习的java时，学到取模<code>%</code>，取模的规则感觉学懂了，但是一转眼就会忘记，很多东西都是这么忘了的，而且一到口边再也想不出来是什么。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delivery</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> a = <span class="number">3</span>, b = <span class="number">6</span>, c = <span class="number">7</span>;</div><div class="line">    System.out.println(a % b);</div><div class="line">    System.out.println(b % c);</div><div class="line">    System.out.println(d % a);</div><div class="line">&#125;</div><div class="line"><span class="comment">//-3 0 1</span></div></pre></td></tr></table></figure></p>
 <p>基本规则：<br>1.<code>a &lt; b ==&gt; a % b = a;</code>对负数也适用。<br>2.<code>a = b ==&gt; a % b = 0;</code><br>3.<code>a &gt; b</code> <code>a % b</code>别告诉我这你不会。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/31/重定向/" itemprop="url">
-                  linux中的重定向
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-31T22:00:28+08:00" content="2016-10-31">
-              2016-10-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/31/重定向/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/31/重定向/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/31/重定向/" class="leancloud_visitors" data-flag-title="linux中的重定向">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="I-O重定向"><a href="#I-O重定向" class="headerlink" title="I/O重定向"></a>I/O重定向</h3><p>在UNIX哲学中，任何东西都是一个文件。我们在使用命令的时候，总是会在终端得到一些输出的结果，或者一些状态的信息。这里得到的标准输出和标准错误，默认情况下，标准输出和标准错误都连接到屏幕，而标准输入则与键盘相连。有时候我们需要做持久化处理，就是把一些输出的结果当作一个文件保存在磁盘上。，这时我们就需要，让输出的结果更改输出的方向，让它不再输出到屏幕。而是输出到文件中。</p>
-<h4 id="重定向标准输出"><a href="#重定向标准输出" class="headerlink" title="重定向标准输出"></a>重定向标准输出</h4><p>使用<code>&gt;</code>符可以重定向标准输出：<br><code>cmds &gt; file</code><br>但是有些时候我们使用命令不当，会导致控制台出现错误信息，要是我们不小心使用上面的方式，那么就不会将命令执行的结果输出到文件中，并且更重要的是由于我们在执行重定向操作的时候没有将新的内容写入文件，此时文件的内容会被覆盖，但是由于输出的错误信息输出到了控制台，那么我们此时的文件就没有内容，文件的长度为零。现在我们知道<code>&gt;</code>符有覆盖文件内容的作用，那么使用：<br><code>&gt; file</code><br>可以创建一个新的空文件，因为我们什么都没有输出到新创建的这个文件中。<br>如果我们想要追加一些内容到一个文件中，那么就需要我们使用新命令<code>&gt;&gt;</code>：<br><code>cmds &gt;&gt; file</code></p>
-<h4 id="重定向标准错误"><a href="#重定向标准错误" class="headerlink" title="重定向标准错误"></a>重定向标准错误</h4><p>上面说当我们试图把一个错误的命令输入一个文件的时候，会将错误的信息输出到屏幕上，那么应该如何解决重定向标准错误的问题呢？<br>要想重定向标准错误，需要使用文件描述符。标准输入、输出、错误的描述符分别为0、1、2.使用方式：<br><code>cmds 2&gt; error.txt</code><br>要想同时重定向标准输出和错误，可以：<br><code>cmds &gt; all.txt 2&amp;&gt;1</code>或者更加简单的：<br><code>cmds &amp;&gt; all.txt</code></p>
 
           
         
